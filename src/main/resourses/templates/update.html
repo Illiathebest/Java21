@@ -7,8 +7,8 @@
 
     </head>
     <body>
-        <div>
-            <div>
+        <div class="background">
+            <div class="form_wrapper">
 				<form action="<%=request.getContextPath()%>/form" method="post">
 							<input type="hidden" name="id" value="<%=request.getParameter('id')%>">
 							
@@ -31,9 +31,9 @@
 							
 							<input type="text" name="email" value="<%=request.getParameter('email')%>"><br/>
 
-							<button type="submit">Update</button>
+							<button class="button" type="submit">Update</button>
 				</form>
-				<a href="<%=request.getContextPath()%>">Return</a>
+				<a class="return" href="<%=request.getContextPath()%>">Return</a>
 			</div>  
         </div>
 
