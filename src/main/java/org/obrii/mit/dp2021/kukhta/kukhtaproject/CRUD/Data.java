@@ -1,9 +1,12 @@
 package org.obrii.mit.dp2021.kukhta.kukhtaproject.CRUD;
 
 import java.io.Serializable;
-import java.util.Arrays;
+import javax.persistence.*;
 
+@Entity
 public class Data implements Serializable{
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     
     private int id;
     private String name;
@@ -60,5 +63,7 @@ public class Data implements Serializable{
     public void setEmail(String email) {
         this.email = email;
     }
+
+    
 
 }

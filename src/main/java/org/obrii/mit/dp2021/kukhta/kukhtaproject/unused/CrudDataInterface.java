@@ -1,6 +1,7 @@
-package org.obrii.mit.dp2021.kukhta.kukhtaproject.CRUD;
+package org.obrii.mit.dp2021.kukhta.kukhtaproject.unused;
 
 import java.util.List;
+import org.obrii.mit.dp2021.kukhta.kukhtaproject.CRUD.Data;
 
 public interface CrudDataInterface {
 

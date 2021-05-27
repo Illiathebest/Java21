@@ -1,4 +1,4 @@
-package org.obrii.mit.dp2021.kukhta.kukhtaproject.CRUD;
+package org.obrii.mit.dp2021.kukhta.kukhtaproject.unused;
 
 public class Config {
     

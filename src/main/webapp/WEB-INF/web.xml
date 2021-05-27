@@ -12,6 +12,10 @@
         <servlet-name>FormUD</servlet-name>
         <servlet-class>org.obrii.mit.dp2021.kukhta.kukhtaproject.CRUD.FormUD</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SpringServlet</servlet-name>
+        <servlet-class>org.obrii.mit.dp2021.kukhta.kukhtaproject.Spring.SpringServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UserDataServlet</servlet-name>
         <url-pattern>/</url-pattern>
@@ -19,6 +23,10 @@
     <servlet-mapping>
         <servlet-name>FormUD</servlet-name>
         <url-pattern>/form</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SpringServlet</servlet-name>
+        <url-pattern>/SpringServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
