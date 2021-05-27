@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>App</title>
+
+    </head>
+    <body>
+        <div>
+			<h1>Welcome!</h1>
+						<table>
+								<thead>
+									<tr>
+										<th>id</th>
+										<th>name</th>
+										<th>age</th>
+										<th>gender</th>
+										<th>email</th>
+										<th>...</th>
+										<th>X</th>
+									</tr>
+								</thead>
+								<tbody>
+									
+								<tr th:each="user : ${users}">
+									<td th:text="${user.id}"></td>
+									<td th:text="${user.name}"></td>
+									<td th:text="${user.age}"></td>
+									<td th:text="${user.gender}"></td>
+									<td th:text="${user.email}"></td>
+									<td>
+										<a th:href="@{/edit/{id}(id=${user.id})}">Edit</a>
+									</td>
+									<td>
+										<a th:href="@{/delete/{id}(id=${user.id})}">Delete</a>
+									</td>
+									
+								</tr>
+							   <tr>
+								   <td colspan="7">
+										<a href="./signup">ADD USER</a>
+									</td>
+								</tr>
+								</tbody>
+							</table>
+											 
+						
+					</div>
+
+
+			</body>
+		</html>            

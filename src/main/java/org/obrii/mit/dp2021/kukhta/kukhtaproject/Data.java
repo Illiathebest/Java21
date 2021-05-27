@@ -1,17 +1,20 @@
-package org.obrii.mit.dp2021.kukhta.kukhtaproject.CRUD;
+package org.obrii.mit.dp2021.kukhta.kukhtaproject;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
-public class Data implements Serializable{
+public class Data{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    
     private int id;
+    @NotBlank(message="Name cannot be null")
     private String name;
     private int age;
+    @NotBlank(message="Gender cannot be null")
     private String gender;
+    @NotBlank(message="Email cannot be null")
     private String email;
 
     public Data() {
@@ -63,7 +66,5 @@ public class Data implements Serializable{
     public void setEmail(String email) {
         this.email = email;
     }
-
-    
 
 }
