@@ -1,6 +1,5 @@
 package org.obrii.mit.dp2021.kukhta.kukhtaproject.CRUD;
 
-import java.io.File;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,16 +9,11 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "UserDataServlet", urlPatterns = {"/"})
 public class UserDataServlet extends HttpServlet {
-    FilesCrud CRUD = new FilesCrud(new File(Config.getFileName()));
-   
+    PostgresCrud CRUD = new PostgresCrud();
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //Read users
-        if (Config.getFileName().equals("")) {
-            Config.setFileName(this.getServletContext().getRealPath("") + "data.txt");
-            CRUD = new FilesCrud(new File(Config.getFileName()));
-        }
-        
         if(request.getParameter("search")!=null){
             request.setAttribute("data", CRUD.sortData(request.getParameter("search")));
             }
@@ -27,7 +21,7 @@ public class UserDataServlet extends HttpServlet {
             request.setAttribute("data", CRUD.readData());
         }
         
-        request.getRequestDispatcher("index.jsp").forward(request, response);
+        request.getRequestDispatcher("home.jsp").forward(request, response);
     }
 
     @Override
@@ -38,7 +32,7 @@ public class UserDataServlet extends HttpServlet {
             req.getParameter("name"),
             Integer.parseInt(req.getParameter("age")),
             req.getParameter("gender"),
-            req.getParameter("email"),true
+            req.getParameter("email")
         );
         CRUD.createData(user);
         doGet(req,resp);
@@ -59,7 +53,7 @@ public class UserDataServlet extends HttpServlet {
             req.getParameter("name"),
             Integer.parseInt(req.getParameter("age")),
             req.getParameter("gender"),
-            req.getParameter("email"),true
+            req.getParameter("email")
         );
         CRUD.updateData(Integer.parseInt(req.getParameter("id")), user);
         doGet(req, resp); 

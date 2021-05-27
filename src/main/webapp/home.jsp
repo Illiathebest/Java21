@@ -5,7 +5,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 
-    <h1>Welcome!</h1>
+    <h1>Welcome to Leonid Lunin project!</h1>
                 <%List<Data> dataList = (List<Data>) request.getAttribute("data");%>
                     <table>
                         <thead>
@@ -61,7 +61,4 @@
                         </tbody>
                     </table>
                                      
-                
-
-                    
-              
+                         

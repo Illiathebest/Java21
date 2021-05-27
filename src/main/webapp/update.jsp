@@ -27,7 +27,7 @@
                 
                 <input type="text" name="email" value="<%=request.getParameter("email")%>"><br/>
 
-                <button type="submit">Update</button>
+                <button class="button" type="submit">Update</button>
     </form>
     <a href="<%=request.getContextPath()%>">Return</a>
 </div>  
