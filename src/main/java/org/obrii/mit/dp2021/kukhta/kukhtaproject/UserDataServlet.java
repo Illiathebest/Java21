@@ -6,8 +6,6 @@
 package org.obrii.mit.dp2021.kukhta.kukhtaproject;
 
 import java.io.IOException;
-
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,6 +18,7 @@ public class UserDataServlet extends HttpServlet {
    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        
         request.getRequestDispatcher("form.jsp").forward(request, response);
     }
 
@@ -27,13 +26,13 @@ public class UserDataServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Application app = new AdminApplication();
         
-        if(request.getParameter("isAdmin")!=null) {
+        if(request.getParameter("isCoolguy")!=null) {
             app.setUser(request, true);
         }
         else app.setUser(request);
         
         request.setAttribute("app", app);
-        request.getRequestDispatcher("submit.jsp").forward(request, response);
+        request.getRequestDispatcher("/submit.jsp").forward(request, response);
     }
 
     @Override
