@@ -5,8 +5,8 @@
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.List"%>
-<%@page import="org.obrii.mit.dp2021.drygha.project1.UserInterface"%>
-<%@page import="org.obrii.mit.dp2021.drygha.project1.Application"%>
+<%@page import="org.obrii.mit.dp2021.kukhta.kukhtaproject.UserInterface"%>
+<%@page import="org.obrii.mit.dp2021.kukhta.kukhtaproject.Application"%>
 <!DOCTYPE html>
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!-->
