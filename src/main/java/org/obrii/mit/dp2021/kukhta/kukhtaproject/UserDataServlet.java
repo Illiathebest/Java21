@@ -26,7 +26,7 @@ public class UserDataServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Application app = new AdminApplication();
         
-        if(request.getParameter("isCoolguy")!=null) {
+        if(request.getParameter("isAdmin")!=null) {
             app.setUser(request, true);
         }
         else app.setUser(request);

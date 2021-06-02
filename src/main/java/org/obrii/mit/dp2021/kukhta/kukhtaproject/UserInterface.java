@@ -23,5 +23,5 @@ public interface UserInterface {
     String getCountry();
     void setCountry(String country);
     
-    String getIsCoolguy();
+    String getIsAdmin();
 }

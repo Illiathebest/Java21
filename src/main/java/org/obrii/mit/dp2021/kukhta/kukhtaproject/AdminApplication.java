@@ -11,13 +11,13 @@ import javax.servlet.http.HttpServletRequest;
 public class AdminApplication extends Application {
 
     @Override
-    public void setUser(HttpServletRequest request, boolean isCoolguy) {
+    public void setUser(HttpServletRequest request, boolean isAdmin) {
         user = new User(
                 
                 request.getParameter("name"),
                 request.getParameter("phone"),
                 request.getParameter("gender"),
                 request.getParameterValues("language"),
-                request.getParameter("country"),isCoolguy);
+                request.getParameter("country"),isAdmin);
     }
 }

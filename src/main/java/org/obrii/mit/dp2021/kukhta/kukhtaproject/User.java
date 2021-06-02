@@ -14,7 +14,7 @@ public class User implements UserInterface {
     private String gender;
     private List<String> language;
     private String country;
-    private boolean isCoolguy;
+    private boolean isAdmin;
 
     
 
@@ -23,7 +23,7 @@ public class User implements UserInterface {
     public User() {
     }
 
-    public User(String name, String phone, String gender, String[] language, String country, boolean isCoolguy) {
+    public User(String name, String phone, String gender, String[] language, String country, boolean isAdmin) {
         this.name = name;
         this.phone = phone;
         this.gender = gender;
@@ -33,7 +33,7 @@ public class User implements UserInterface {
         }
         
         this.country = country;
-        this.isCoolguy=isCoolguy;
+        this.isAdmin=isAdmin;
     }
 
     @Override
@@ -89,7 +89,7 @@ public class User implements UserInterface {
 
     
     @Override
-    public String getIsCoolguy() {
-        return isCoolguy ? "You`ll receive news about updates":"You will not receive news about updates";
+    public String getIsAdmin() {
+        return isAdmin ? "You`ll receive news about updates":"You will not receive news about updates";
     }
 }
