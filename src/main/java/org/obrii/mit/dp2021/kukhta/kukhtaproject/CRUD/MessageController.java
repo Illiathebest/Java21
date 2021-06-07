@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 @Controller
 public class MessageController {
 
-    private final String URL = "http://localhost:8090/KukhtaProject/Lab7service/data";
+    private final String URL = "http://localhost:8081/Kukhtaproject/Lab7Service/data";
 
     @Autowired
     RestTemplate restTemplate;
@@ -29,11 +29,10 @@ public class MessageController {
     @PostMapping("/add")
     public String createData(@RequestParam(name = "name") String name,
             @RequestParam(name = "age") String age,
-            @RequestParam(name = "gender") String gender,
             @RequestParam(name = "email") String email,
             Model model) {
 
-        restTemplate.postForObject(URL, new Data(name,Integer.parseInt(age),gender,email),Data.class);
+        restTemplate.postForObject(URL, new Data(name,Integer.parseInt(age),email),Data.class);
         return getFormData(model);
     }
 
@@ -41,12 +40,11 @@ public class MessageController {
     public String updateData(
             @RequestParam(name = "name") String name,
             @RequestParam(name = "age") String age,
-            @RequestParam(name = "gender") String gender,
             @RequestParam(name = "email") String email,
             @RequestParam(name = "url") String url,
             Model model) {
 
-        restTemplate.put(url, new Data(name,Integer.parseInt(age),gender,email));
+        restTemplate.put(url, new Data(name,Integer.parseInt(age),email));
         return getFormData(model);
     }
     

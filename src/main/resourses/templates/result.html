@@ -3,19 +3,17 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>App</title>
-
+        <title>Lab7Consumer</title>
 
     </head>
     <body>
         <div class="background">
-			<h1 class="title">Welcome!</h1>
+			<h1 class="title">Students</h1>
 						<table class="styled-table">
 								<thead>
 									<tr>
 										<th>name</th>
 										<th>age</th>
-										<th>gender</th>
 										<th>email</th>
 										<th>...</th>
 										<th>X</th>
@@ -24,20 +22,13 @@
 								<tbody>
 									
 								<tr th:each="student:${students}">
-									<td th:text="${student.name}"></td>
-									<td th:text="${student.age}"></td>
-									<td th:text="${student.gender}"></td>
-									<td th:text="${student.email}"></td>
-									<td>
-										<form action="./update" method="post">
-											<input type="hidden" name="url" th:value="${student.getHref()}">
-											<input type="text" name="name" th:value="${student.name}"/>
-											<input type="text" name="age" th:value="${student.age}"/>
-											<input type="text" name="gender" th:value="${student.gender}"/>
-											<input type="text" name="email" th:value="${student.email}"/>
-											<input type="submit" value="update"/>
-										</form>
-									</td>
+                                                                        <form action="./update" method="post">
+                                                                            <input type="hidden" name="url" th:value="${student.getHref()}">
+                                                                            <td><input type="text" name="name" th:value="${student.name}" required/></td>
+                                                                            <td><input type="text" name="age" th:value="${student.age}" required/></td> 
+                                                                            <td><input type="text" name="email" th:value="${student.email}" required/></td>
+                                                                            <td><input type="submit" value="update"/></td>
+                                                                        </form>
 									<td>
 										<form action="./delete" method="post">
 											<input type="hidden" name="url" th:value="${student.getHref()}">                
@@ -49,16 +40,13 @@
 							   <tr>
 								   <form action="./add" method="post">
 										<td>
-											<input type="text" name="name" placeholder="Enter name"/>
+											<input type="text" name="name" placeholder="Enter name" required/>
 										</td>
 										<td>
-											<input type="text" name="age" placeholder="Enter age"/>
+											<input type="text" name="age" placeholder="Enter age" required/>
 										</td>
 										<td>
-											<input type="text" name="gender" placeholder="Enter gender"/>
-										</td>
-										<td>
-											<input type="text" name="email" placeholder="Enter email"/>
+											<input type="text" name="email" placeholder="Enter email" required/>
 										</td>
 										<td>
 											<input type="submit" value="Add new"/>
@@ -70,7 +58,20 @@
 											 
 						
 					</div>
-
+				</div>
+			</div>
+		</div>
+			<!--===============================================================================================-->	
+			<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+		<!--===============================================================================================-->
+			<script src="vendor/bootstrap/js/popper.js"></script>
+			<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		<!--===============================================================================================-->
+			<script src="vendor/select2/select2.min.js"></script>
+		<!--===============================================================================================-->
+			<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+		<!--===============================================================================================-->
+			<script src="js/main.js"></script>
 
 			</body>
 		</html>            

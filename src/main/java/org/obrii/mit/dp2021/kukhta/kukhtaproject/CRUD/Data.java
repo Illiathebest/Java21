@@ -10,7 +10,6 @@ public class Data {
     private long id;
     private String name;
     private int age;
-    private String gender;
     private String email;
     
     @JsonProperty("_links")
@@ -24,18 +23,16 @@ public class Data {
     public Data() {
     }
 
-    public Data(String name, int age, String gender, String email) {
+    public Data(String name, int age, String email) {
         this.name = name;
         this.age = age;
-        this.gender = gender;
         this.email = email;
     }
      
-    public Data(long id, String name, int age, String gender, String email) {
+    public Data(long id, String name, int age, String email) {
         this.id=id;
         this.name = name;
         this.age = age;
-        this.gender = gender;
         this.email = email;
     }
     
@@ -64,13 +61,6 @@ public class Data {
     }
 
     
-    public String getGender() {
-        return gender;
-    }
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-    
     
     public String getEmail() {
         return email;
@@ -85,7 +75,6 @@ public class Data {
         sb.append("Student{id=").append(id);
         sb.append(", name=").append(name);
         sb.append(", age=").append(age);
-        sb.append(", gender=").append(gender);
         sb.append(", email=").append(email);
         sb.append(", links=").append(links);
         sb.append(", href=").append(href);
