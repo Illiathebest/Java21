@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 @Controller
 public class MessageController {
 
-    private final String URL = "http://localhost:8081/Kukhtaproject/Lab7Service/data";
+    private final String URL = "http://localhost:8081/Kukhtaproject/Lab7service/data";
 
     @Autowired
     RestTemplate restTemplate;
