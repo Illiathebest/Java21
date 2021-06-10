@@ -1,8 +1,8 @@
-package org.obrii.mit.dp2021.springMVCThymleafCRUD.controller;
+package org.obrii.mit.dp2021.kukhta.springMVCThymleafCRUD.controller;
 
 import javax.validation.Valid;
-import org.obrii.mit.dp2021.springMVCThymleafCRUD.Domain.User;
-import org.obrii.mit.dp2021.springMVCThymleafCRUD.repository.UserRepository;
+import org.obrii.mit.dp2021.kukhta.springMVCThymleafCRUD.Domain.User;
+import org.obrii.mit.dp2021.kukhta.springMVCThymleafCRUD.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

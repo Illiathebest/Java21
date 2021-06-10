@@ -1,4 +1,4 @@
-package org.obrii.mit.dp2021.springMVCThymleafCRUD;
+package org.obrii.mit.dp2021.kukhta.springMVCThymleafCRUD;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

@@ -1,4 +1,4 @@
-package org.obrii.mit.dp2021.springMVCThymleafCRUD.Domain;
+package org.obrii.mit.dp2021.kukhta.springMVCThymleafCRUD.Domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
