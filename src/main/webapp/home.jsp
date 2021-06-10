@@ -1,4 +1,4 @@
-<%@page import="org.obrii.mit.dp2021.toloshnyi.toloshnyilab3.data.Data"%>
+<%@page import="org.obrii.mit.dp2021.kukhta.kukhtaproject.data.Data"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
