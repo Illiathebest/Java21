@@ -1,13 +1,14 @@
-package org.obrii.mit.dp2021.kukhta.kukhtaproject.CRUD;
-
+package org.obrii.mit.dp2021.toloshnyi.Domain;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Self {
     
     private String href;
+
     public Self() {
     }
+
     
     @Override
     public String toString() {
@@ -21,8 +22,4 @@ public class Self {
     public void setHref(String href) {
         this.href = href;
     }
-    
-    
-    
-    
 }

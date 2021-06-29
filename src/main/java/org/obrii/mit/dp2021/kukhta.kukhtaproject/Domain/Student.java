@@ -1,16 +1,18 @@
-package org.obrii.mit.dp2021.kukhta.kukhtaproject.CRUD;
-
-import com.fasterxml.jackson.annotation.*;
+package org.obrii.mit.dp2021.toloshnyi.Domain;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.stereotype.Component;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Component
-public class Data {
+public class Student {
             
     private long id;
+    
     private String name;
+    
     private int age;
-    private String email;
     
     @JsonProperty("_links")
     private Links links;
@@ -20,53 +22,37 @@ public class Data {
     
    
 
-    public Data() {
+    public Student() {
     }
 
-    public Data(String name, int age, String email) {
+    public Student(String name, int age) {
         this.name = name;
         this.age = age;
-        this.email = email;
-    }
-     
-    public Data(long id, String name, int age, String email) {
-        this.id=id;
-        this.name = name;
-        this.age = age;
-        this.email = email;
     }
     
 
     public long getId() {
         return id;
     }
+
     public void setId(long id) {
         this.id = id;
     }
-    
-    
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
-    
-    
+
     public int getAge() {
         return age;
     }
+
     public void setAge(int age) {
         this.age = age;
-    }
-
-    
-    
-    public String getEmail() {
-        return email;
-    }
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     @Override
@@ -75,7 +61,6 @@ public class Data {
         sb.append("Student{id=").append(id);
         sb.append(", name=").append(name);
         sb.append(", age=").append(age);
-        sb.append(", email=").append(email);
         sb.append(", links=").append(links);
         sb.append(", href=").append(href);
         sb.append('}');
@@ -90,13 +75,5 @@ public class Data {
 
     public String getHref() {
         return links.getSelf().getHref();
-    }
-
-  
-
-   
-    
-    
-    
-    
+    }    
 }

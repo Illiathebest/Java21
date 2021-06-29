@@ -1,4 +1,4 @@
-package org.obrii.mit.dp2021.kukhta.kukhtaproject.CRUD;
+package org.obrii.mit.dp2021.toloshnyi.Domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -8,18 +8,18 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class StudentList {
    
-    @JsonProperty("data")
-    private List<Data> studentList;
+    @JsonProperty("student")
+    private List<Student> studentList;
 
     public StudentList() {
         this.studentList = new ArrayList<>();
     }
 
-    public List<Data> getStudentList() {
+    public List<Student> getStudentList() {
         return studentList;
     }
 
-    public void setStudentList(List<Data> studentList) {
+    public void setStudentList(List<Student> studentList) {
         this.studentList = studentList;
     }
 
@@ -27,5 +27,4 @@ public class StudentList {
     public String toString() {
         return "StudentList{" + "studentList=" + studentList + '}';
     }
-
 }
