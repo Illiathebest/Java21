@@ -1,4 +1,7 @@
-package org.obrii.mit.dp2021.kukhta.kukhtaproject.CRUD;
+package org.obrii.mit.dp2021.kukhta.kukhtaproject;
+
+
+
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,19 +10,26 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "FormUD", urlPatterns = {"/form"})
-public class FormUD extends HttpServlet {
-    UserDataServlet userServlet = new UserDataServlet();
+
+@WebServlet(name = "FormServlet", urlPatterns = {"/Forma"})
+public class FormServlet extends HttpServlet {
+    
+    DataServlet dataServlet = new DataServlet();
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        userServlet.doDelete(request, response);
+      dataServlet.doDelete(request,response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        userServlet.doPut(request, response);
+        dataServlet.doPut(request,response);
     }
 
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }
 }

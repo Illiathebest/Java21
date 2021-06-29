@@ -1,67 +1,100 @@
 
 
+<%@page import="org.obrii.mit.dp2021.kukhta.kukhtaproject.Data"%>
 <%@page import="java.util.List"%>
-<%@page import="org.obrii.mit.dp2021.kukhta.kukhtaproject.CRUD.Data"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+          <link rel="stylesheet" href="<%=request.getContextPath()%>/reset.css">
+          <link href="<%=request.getContextPath()%>/css.css" rel="stylesheet" type="text/css"/>
+        
+        <title>home</title>
+    </head>
+    <body id="home__main">
+        <h1>A list of users</h1>
+        <form action= "<%=request.getContextPath()%>/" method="get" id="sr__home">
+            <input type="text" name="search">
+            <input type="submit" value="search data">
+        </form>
+        
+        <%
+        List<Data> dataList = (List<Data>) request.getAttribute("data");
+        %>
+        
+       
+        <table>
+          <tr class="tr1">
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+          </tr>  
+        <%for(Data data:dataList){%>
+        
+ 
+        <tr class="tr2">
+            <td>
+                <%=data.getId() %>
+            </td>
+            <td>
+                <%=data.getName()%>
+            </td>
+            <td>
+                <%=data.getAge()%>
+            </td>
+            <td>
+            <form action="updateForma.jsp" method="post">
+            <input type="hidden" name="id" value="<%=data.getId() %>">
+            <input type="hidden" name="name" value="<%=data.getName()%>">
+            <input type="hidden" placeholder="integer" name="age" value="<%=data.getAge()%>">
+            
+            
+            <input type="submit" value="update data">
+            </form>
+            </td>
+            <td>
+               <form action="<%=request.getContextPath()%>/Forma" method="get">
+            <input type="hidden" name="id" value="<%=data.getId() %>">
 
+            <input type="submit" value="delete data">
+            </form> 
+            </td>
+            
+        
+        
+        <%}%>
+        </tr>
+        </table>
 
-    <h1>Welcome!</h1>
-                <%List<Data> dataList = (List<Data>) request.getAttribute("data");%>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>id</th>
-                                <th>name</th>
-                                <th>age</th>
-                                <th>gender</th>
-                                <th>email</th>
-                                <th>...</th>
-                                <th>X</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <%for (Data data : dataList) {%>
-                        <tr>
-                            <td><%=data.getId()%></td>
-                            <td><%=data.getName()%></td>
-                            <td><%=data.getAge()%></td>
-                            <td><%=data.getGender()%></td>
-                            <td><%=data.getEmail()%></td>
-                            <td>
-                                <form action="update.jsp" method="post">
-                                    <input type="hidden" name="id" value="<%=data.getId()%>">
-                                    <input type="hidden" name="name" value="<%=data.getName()%>">
-                                    <input type="hidden" name="age" value="<%=data.getAge()%>">
-                                    <input type="hidden" name="gender" value="<%=data.getGender()%>">
-                                    <input type="hidden" name="email" value="<%=data.getEmail()%>">
-                                    <input type="submit" value="Update">
-                                </form>
-                            </td>
-                            <td>
-                                <form action="<%=request.getContextPath()%>/form" method="get">
-                                    <input type="hidden" name="id" value="<%=data.getId()%>">
-                                    <input type="submit" value="Delete">
-                                </form>
-                            </td>
-                        </tr>
-                       <%}%>
-                       <tr>
-                           <td colspan="4">
-                               <form action= "<%=request.getContextPath()%>/" method="get">
-                                    <input type="text" name="search">
-                                    <input type="submit" value="search data">
-                               </form>
-                           </td>
-                            <td colspan="3">
-                                <form action="home.jsp" method="get">
-                                    <input type="submit" value="ADD USER" >
-                                </form>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                                     
-                
-
-                    
-              
+        <form action="Forma.jsp" id="add__home">
+            <input type="submit" value="add data">
+        </form>
+        
+        
+        
+    </body>
+</html>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
+        
+      
