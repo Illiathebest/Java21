@@ -14,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 @Controller
 public class MessageController {
 
-    private final String URL = "http://dp2021.mit.obrii.org/KukhtaProject/Lab7service/student";
+    private final String URL = "http://localhost:8081/KukhtaProject/Lab7service/student";
 
     @Autowired
     RestTemplate restTemplate;
