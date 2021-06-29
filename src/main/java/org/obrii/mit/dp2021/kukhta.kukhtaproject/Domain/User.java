@@ -1,4 +1,4 @@
-package org.obrii.mit.dp2021.toloshnyi.Domain;
+package org.obrii.mit.dp2021.kukhta.kukhtaproject.Domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

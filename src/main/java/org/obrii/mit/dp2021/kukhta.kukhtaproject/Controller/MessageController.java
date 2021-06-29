@@ -1,8 +1,8 @@
-package org.obrii.mit.dp2021.toloshnyi.Controller;
+package org.obrii.mit.dp2021.kukhta.kukhtaproject.Controller;
 
 import java.util.List;
-import org.obrii.mit.dp2021.toloshnyi.Domain.Embedded;
-import org.obrii.mit.dp2021.toloshnyi.Domain.Student;
+import org.obrii.mit.dp2021.kukhta.kukhtaproject.Domain.Embedded;
+import org.obrii.mit.dp2021.kukhta.kukhtaproject.Domain.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 @Controller
 public class MessageController {
 
-    private final String URL = "http://dp2021.mit.obrii.org/ToloshnyiProject/Lab7service/student";
+    private final String URL = "http://dp2021.mit.obrii.org/KukhtaProject/Lab7service/student";
 
     @Autowired
     RestTemplate restTemplate;

@@ -1,4 +1,4 @@
-package org.obrii.mit.dp2021.toloshnyi;
+package org.obrii.mit.dp2021.kukhta.kukhtaproject;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

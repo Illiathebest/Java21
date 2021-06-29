@@ -1,8 +1,8 @@
-package org.obrii.mit.dp2021.toloshnyi.Controller;
+package org.obrii.mit.dp2021.kukhta.kukhtaproject.Controller;
 
 import javax.validation.Valid;
-import org.obrii.mit.dp2021.toloshnyi.Domain.User;
-import org.obrii.mit.dp2021.toloshnyi.Repository.UserRepository;
+import org.obrii.mit.dp2021.kukhta.kukhtaproject.Domain.User;
+import org.obrii.mit.dp2021.kukhta.kukhtaproject.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

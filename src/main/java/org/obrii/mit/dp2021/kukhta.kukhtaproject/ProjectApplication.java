@@ -1,4 +1,4 @@
-package org.obrii.mit.dp2021.toloshnyi;
+package org.obrii.mit.dp2021.kukhta.kukhtaproject;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

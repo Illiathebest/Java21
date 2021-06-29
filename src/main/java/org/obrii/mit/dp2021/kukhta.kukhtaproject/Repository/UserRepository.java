@@ -1,6 +1,6 @@
-package org.obrii.mit.dp2021.toloshnyi.Repository;
+package org.obrii.mit.dp2021.kukhta.kukhtaproject.Repository;
 
-import org.obrii.mit.dp2021.toloshnyi.Domain.User;
+import org.obrii.mit.dp2021.kukhta.kukhtaproject.Domain.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package org.obrii.mit.dp2021.toloshnyi.Domain;
+package org.obrii.mit.dp2021.kukhta.kukhtaproject.Domain;
 
 public class Entity {
     
